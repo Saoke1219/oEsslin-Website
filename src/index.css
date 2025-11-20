@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply Atkinson Hyperlegible globally */
+body {
+  @apply font-sans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Existing slide animation --- */
+@keyframes slide {
+  0% { transform: translateY(0%); }
+  20% { transform: translateY(0%); }
+  25% { transform: translateY(-100%); }
+  45% { transform: translateY(-100%); }
+  50% { transform: translateY(-200%); }
+  70% { transform: translateY(-200%); }
+  75% { transform: translateY(-300%); }
+  95% { transform: translateY(-300%); }
+  100% { transform: translateY(0%); }
+}
+
+.animate-slide {
+  display: flex;
+  flex-direction: column;
+  animation: slide 12s infinite;
+}
+
+/* src/styles/scroller.css */
+/* index.css */
+
+/* Hide horizontal scrollbar for all scrollers */
+.scroller {
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroller::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Smooth infinite scroll effect */
+.scroller__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem; /* fallback gap if not using Tailwind */
+}
+
+/* Responsive min-widths for scroller items (fallback) */
+.scroller-item {
+  min-width: 200px;
+}
+
+@media (min-width: 640px) {
+  .scroller-item {
+    min-width: 240px;
+  }
+}
+
+@media (min-width: 768px) {
+  .scroller-item {
+    min-width: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scroller-item {
+    min-width: 320px;
+  }
+}
+
+/* Optional: Text styling */
+.scroller-item span {
+  color: white;
+  font-weight: 600;
+  white-space: normal;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
