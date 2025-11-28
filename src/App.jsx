@@ -14,14 +14,15 @@ import ScrollUp from "./components/ScrollUp";
 
 export default function App() {
 
-  // 👇 Fix: ensure homepage always loads first
-  if (window.location.hash === "" || window.location.hash === "#") {
+  // Force redirect to homepage if no hash is present
+  if (!window.location.hash || window.location.hash === "#") {
     window.location.replace("#/");
   }
 
   return (
-    <Router basename="/oEsslin-Website">
+    <Router>
       <div className="relative flex flex-col min-h-screen">
+        
         <Navbar />
 
         <div className="flex-grow">
@@ -34,8 +35,8 @@ export default function App() {
             <Route path="/FieldCraft" element={<FieldCraft />} />
             <Route path="/SifloopHub" element={<SifloopHub />} />
 
-            {/* Catch-all → force homepage */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            {/* Redirect unknown route → homepage */}
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
 
