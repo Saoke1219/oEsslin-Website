@@ -14,12 +14,12 @@ import ScrollUp from "./components/ScrollUp";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/oEsslin-Website">
       <div className="relative flex flex-col min-h-screen">
-        {/* Navbar */}
+
+        {/* Navbar stays outside Routes */}
         <Navbar />
 
-        {/* Page content */}
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,13 +29,16 @@ export default function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/FieldCraft" element={<FieldCraft />} />
             <Route path="/SifloopHub" element={<SifloopHub />} />
+
+            {/* 👇 Wildcard route — redirects ANY unknown path to homepage */}
+            <Route path="*" element={<Home />} />
           </Routes>
         </div>
 
         {/* Footer */}
         <Footer />
 
-        {/* Scroll Up */}
+        {/* Scroll Up Button */}
         <ScrollUp />
       </div>
     </Router>
