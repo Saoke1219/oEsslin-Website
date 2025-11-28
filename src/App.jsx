@@ -1,7 +1,6 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -14,6 +13,12 @@ import SifloopHub from "./pages/SifloopHub";
 import ScrollUp from "./components/ScrollUp";
 
 export default function App() {
+
+  // 👇 Fix: ensure homepage always loads first
+  if (window.location.hash === "" || window.location.hash === "#") {
+    window.location.replace("#/");
+  }
+
   return (
     <Router basename="/oEsslin-Website">
       <div className="relative flex flex-col min-h-screen">
@@ -29,8 +34,8 @@ export default function App() {
             <Route path="/FieldCraft" element={<FieldCraft />} />
             <Route path="/SifloopHub" element={<SifloopHub />} />
 
+            {/* Catch-all → force homepage */}
             <Route path="*" element={<Navigate to="/" replace />} />
-
           </Routes>
         </div>
 
