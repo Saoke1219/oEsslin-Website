@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -14,10 +14,8 @@ import ScrollUp from "./components/ScrollUp";
 
 export default function App() {
   return (
-    <Router basename="/oEsslin-Website">
+    <Router basename="/">
       <div className="relative flex flex-col min-h-screen">
-
-        {/* Navbar stays outside Routes */}
         <Navbar />
 
         <div className="flex-grow">
@@ -30,15 +28,11 @@ export default function App() {
             <Route path="/FieldCraft" element={<FieldCraft />} />
             <Route path="/SifloopHub" element={<SifloopHub />} />
 
-            {/* 👇 Wildcard route — redirects ANY unknown path to homepage */}
             <Route path="*" element={<Home />} />
           </Routes>
         </div>
 
-        {/* Footer */}
         <Footer />
-
-        {/* Scroll Up Button */}
         <ScrollUp />
       </div>
     </Router>
