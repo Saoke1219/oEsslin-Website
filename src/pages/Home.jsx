@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import InfiniteScroller from "../components/InfiniteScroller";
 import Scramble from "../components/Scramble";
+import OEsslin from "../components/OEsslin";
+
 
 export default function Home() {
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80"></div>
 
@@ -63,17 +65,7 @@ export default function Home() {
         transition={{ duration: 1 }}
         className="text-base sm:text-lg md:text-xl leading-relaxed text-black max-w-3xl text-left"
       >
-        At oEsslin, we see the world as an interconnected system — where economies,
-        ecosystems, and communities continuously shape one another. We exist to
-        make sense of this complexity and turn it into opportunity. Grounded in
-        systems thinking and participatory design, our work helps leaders,
-        institutions and communities see the larger patterns beneath their
-        challenges and act with clarity and foresight. Uniting science, strategy
-        and lived experience to co-create solutions that are adaptive, equitable
-        and enduring — strengthening the resilience of societies and the
-        sustainability of the systems that sustain them. oEsslin is not just a
-        consultancy; it is a catalyst for transformation — designing the
-        intelligent, inclusive and regenerative futures our world urgently needs.
+        At <OEsslin />, we understand the world not as isolated problems, but as interconnected opportunities. Grounded in systems thinking and participatory design, our approach enables leaders to see the larger patterns shaping their work and reveal leverage points conventional strategies miss. With deep expertise across regions and sectors, we turn insight into action and enable leaders to make high-impact decisions that strengthen performance and advance societal progress. Together, we don't just solve today's challenges, we create solutions that endure. 
       </motion.p>
 
     </div>

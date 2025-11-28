@@ -7,25 +7,25 @@ export default function ApproachCards() {
   const cards = [
     {
       title: "Systems Thinking",
-      img: "/systems.jpg",
+      img: `${import.meta.env.BASE_URL}systems.jpg`,
       desc: "Mapping connections across social, ecological, and economic systems to drive holistic progress.",
       link: "#"
     },
     {
       title: "AI / IoT",
-      img: "/ai.jpg",
+      img: `${import.meta.env.BASE_URL}ai.jpg`,
       desc: "Blending intelligence and sensing tech to unlock data-driven transformation.",
       link: "#"
     },
     {
       title: "Nature-Based Solutions",
-      img: "/planting_trees.jpg",
+      img: `${import.meta.env.BASE_URL}planting_trees.jpg`,
       desc: "Designing regenerative solutions that collaborate with landscapes, not exploit them.",
       link: "#"
     },
     {
       title: "Human-Centered Design",
-      img: "/hmdesign.jpg",
+      img: `${import.meta.env.BASE_URL}hmdesign.jpg`,
       desc: "Creating resilient innovations grounded in real people’s needs and lived experiences.",
       link: "#"
     }
@@ -76,14 +76,7 @@ export default function ApproachCards() {
               )}
             </div>
 
-              {/* Hover CTA Button */}
-              {/* Uncomment if needed
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <button className="h-10 w-10 rounded-full flex items-center justify-center bg-black text-white shadow hover:bg-gray-800">
-                  →
-                </button>
-              </div>
-              */}
+            
             </motion.div>
           ))}
         </div>

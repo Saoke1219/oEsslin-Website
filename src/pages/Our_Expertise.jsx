@@ -13,8 +13,8 @@ export default function Our_Work() {
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           
           {/* Title */}
-          <h1 className="text-lg sm:text-xl md:text-2xl mb-4 text-black font-medium tracking-widest uppercase">
-            AREAS OF FOCUS
+          <h1 className="font-semibold text-4xl sm:text-4xl md:text-5xl lg:text-7xl text-left max-w-6xl leading-tight mb-4">
+            OUR EXPERTISE
           </h1>
           
           {/* Description */}
@@ -52,7 +52,7 @@ export default function Our_Work() {
         >
           {/* Image */}
           <motion.img
-            src="/bsfl.jpg"
+            src={`${import.meta.env.BASE_URL}bsfl.jpg`}
             alt="Featured cover"
             className="w-full h-full object-cover transition-transform duration-700"
             whileHover={{ scale: 1 }}

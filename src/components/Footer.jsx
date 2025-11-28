@@ -1,4 +1,6 @@
 import React from "react";
+import OEsslin from "../components/OEsslin";
+
 
 export default function Footer() {
   return (
@@ -9,7 +11,7 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-xl font-semibold mb-4">About oEsslin</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            oEsslin is a multidisciplinary consultancy helping leaders, organizations, and communities navigate complex challenges in sustainability, policy, and technology. Our mission is to transform complexity into opportunity.
+          <OEsslin />  is a multidisciplinary consultancy helping leaders, organizations, and communities navigate complex challenges in sustainability, policy, and technology. Our mission is to transform complexity into opportunity.
           </p>
         </div>
 
@@ -55,7 +57,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} oEsslin. All rights reserved.
+        &copy; {new Date().getFullYear()} <OEsslin /> . All rights reserved.
       </div>
     </footer>
   );

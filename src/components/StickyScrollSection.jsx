@@ -1,73 +1,74 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const base = import.meta.env.BASE_URL;
 
 const slides = [
   {
     title: "Energy & Renewable Solutions",
     text: `Driving the transition to clean energy through hydrogen production, electrolysis and integration with renewables. 
     We design decarbonization strategies that balance environmental impact, energy access and economic feasibility.`,
-    img: "/turbines.jpg",
+    img: `${base}turbines.jpg`,
   },
   {
     title: "Environmental & Climate Resilience",
     text: `Supporting ecosystem restoration, wetland recovery, biodiversity conservation and carbon sequestration initiatives. 
     Our work strengthens climate adaptation and enhances the resilience of both natural and human systems.`,
-    img: "/social.jpg",
+    img: `${base}social.jpg`,
   },
   {
     title: "Water Management & Hydrological Systems",
     text: `Advancing sustainable water management through improved quality, sanitation planning and ecosystem-based approaches. 
     We develop innovative hydrological and policy solutions that safeguard water security for people and ecosystems.`,
-    img: "/water.png",
+    img: `${base}water.jpg`,
   },
   {
     title: "Infrastructure & Transportation",
     text: `Shaping future-ready cities through resilient infrastructure, integrated urban systems and low-emission mobility. 
     We guide the shift to hydrogen-based and sustainable transport networks that enhance connectivity and quality of life.`,
-    img: "/infrastructure.png",
+    img: `${base}infrastructure.png`,
   },
   {
     title: "Agriculture & Food Security",
     text: `Advancing climate-smart and regenerative agriculture by integrating clean technologies, efficient irrigation and sustainable fertilizer production. 
     Our systems approach strengthens food security while protecting ecological integrity.`,
-    img: "/planting_trees.jpg",
+    img: `${base}planting_trees.jpg`,
   },
   {
     title: "Technology & Innovation",
     text: `Harnessing AI, IoT and digital platforms to optimize resources, improve forecasting and enable adaptive solutions to climate and sustainability challenges. 
     We help institutions transition toward intelligent, data-driven systems.`,
-    img: "/ai.jpg",
+    img: `${base}ai.jpg`,
   },
   {
     title: "Governance & Policy",
     text: `Strengthening institutional capacity through adaptive governance, regulatory reform and policy innovation. 
     We help governments and organizations design frameworks that foster accountability and systemic transformation.`,
-    img: "/roadmap.jpg",
+    img: `${base}roadmap.jpg`,
   },
   {
     title: "Finance, Markets & Sustainable Investment",
     text: `Structuring green finance mechanisms, carbon markets and impact investment strategies that align sustainability with economic opportunity. 
     We connect public and private actors to mobilize finance for systemic change.`,
-    img: "/energy.jpg",
+    img: `${base}energy.jpg`,
   },
   {
     title: "Social & Community Development",
     text: `Empowering communities through participatory design, inclusive governance and equitable access to resources. 
     Our work builds resilience from the ground up, ensuring no one is left behind in the sustainability transition.`,
-    img: "/water.png",
+    img: `${base}water.png`,
   },
   {
     title: "Education & Capacity Building",
     text: `Designing and delivering programs that strengthen leadership, systems literacy and technical capacity for climate action. 
     We build the knowledge and skills needed to drive lasting institutional and societal transformation.`,
-    img: "/social.jpg",
+    img: `${base}social.jpg`,
   },
   {
     title: "Health & Sanitation",
     text: `Advancing health resilience through sustainable sanitation, integrated health systems and equitable service delivery. 
     We link health, infrastructure and governance to strengthen community wellbeing.`,
-    img: "/roadmap.jpg",
+    img: `${base}/roadmap.jpg`,
   },
 ];
 

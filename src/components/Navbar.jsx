@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
 import Dropdown from "./Dropdown";
 
 export default function Navbar() {
@@ -13,11 +12,12 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow px-4">
       <div className="max-w-7xl mx-auto relative flex items-center justify-between h-20">
+
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/" onClick={scrollToTop}>
             <img
-              src={logo}
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Logo"
               className="w-auto h-20 cursor-pointer object-contain"
             />
@@ -26,10 +26,8 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center absolute right-0 pr-6">
-          
-
           <Dropdown label="WHO WE ARE" items={[{ label: "About Us", to: "/About_Us" }]} />
-          <Dropdown label="OUR WORK" items={[{ label: "Areas Of Focus", to: "/Areas_Of_Focus" }]} />
+          <Dropdown label="OUR WORK" items={[{ label: "Our Expertise", to: "/Our_Expertise" }]} />
 
           <Link to="/Collaborate" className="hover:text-gray-600">
             COLLABORATE
@@ -63,16 +61,36 @@ export default function Navbar() {
           >
             Home
           </Link>
-          <Link to="/About_Us" onClick={() => setIsOpen(false)} className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center">
+
+          <Link
+            to="/About_Us"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center"
+          >
             Who We Are
           </Link>
-          <Link to="/Areas_Of_Focus" onClick={() => setIsOpen(false)} className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center">
+
+          <Link
+            to="/Our_Expertise"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center"
+          >
             Our Work
           </Link>
-          <Link to="/Collaborate" onClick={() => setIsOpen(false)} className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center">
+
+          <Link
+            to="/Collaborate"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center"
+          >
             Collaborate
           </Link>
-          <Link to="/Contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center">
+
+          <Link
+            to="/Contact"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 hover:bg-gray-200 rounded w-full text-center"
+          >
             Contact Us
           </Link>
         </div>
@@ -80,3 +98,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

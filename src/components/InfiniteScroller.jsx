@@ -2,20 +2,24 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+const base = import.meta.env.BASE_URL;
+
+
 const itemsList = [
-  { image: "/turbines.png", title: "ENERGY & RENEWABLE SOLUTIONS" },
-  { image: "/oesslin.png", title: "ENVIRONMENTAL & CLIMATE RESILIENCE" },
-  { image: "/water.png", title: "WATER MANAGEMENT & HYDROLOGICAL SYSTEMS" },
-  { image: "/cityscape.png", title: "INFRASTRUCTURE & TRANSPORTATION" },
-  { image: "/food.png", title: "AGRICULTURE & FOOD SECURITY" },
-  { image: "/round_table.png", title: "GOVERNANCE & POLICY" },
-  { image: "/ai.png", title: "TECHNOLOGY & INNOVATION" },
-  { image: "/infrastructure.png", title: "FINANCE, MARKETS & SUSTAINABLE INVESTMENT" },
-  { image: "/community.png", title: "SOCIAL & COMMUNITY DEVELOPMENT" },
-  { image: "/engagement.png", title: "EDUCATION & CAPACITY BUILDING" },
-  { image: "/health.png", title: "HEALTH & SANITATION" },
-  { image: "/partner.png", title: "PARTNERSHIPS & COLLABORATION" },
+  { image: `${base}turbines.png`, title: "ENERGY & RENEWABLE SOLUTIONS" },
+  { image: `${base}oesslin.png`, title: "ENVIRONMENTAL & CLIMATE RESILIENCE" },
+  { image: `${base}water.png`, title: "WATER MANAGEMENT & HYDROLOGICAL SYSTEMS" },
+  { image: `${base}cityscape.png`, title: "INFRASTRUCTURE & TRANSPORTATION" },
+  { image: `${base}food.png`, title: "AGRICULTURE & FOOD SECURITY" },
+  { image: `${base}round_table.png`, title: "GOVERNANCE & POLICY" },
+  { image: `${base}ai.jpg`, title: "TECHNOLOGY & INNOVATION" },
+  { image: `${base}infrastructure.png`, title: "FINANCE, MARKETS & SUSTAINABLE INVESTMENT" },
+  { image: `${base}community.png`, title: "SOCIAL & COMMUNITY DEVELOPMENT" },
+  { image: `${base}engagement.png`, title: "EDUCATION & CAPACITY BUILDING" },
+  { image: `${base}health.png`, title: "HEALTH & SANITATION" },
+  { image: `${base}partner.png`, title: "PARTNERSHIPS & COLLABORATION" },
 ];
+
 
 export default function InfiniteScroller() {
   const topRef = useRef(null);

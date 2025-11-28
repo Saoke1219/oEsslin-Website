@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About_Us from "./pages/About_Us";
-import Areas_Of_Focus from "./pages/Areas_Of_Focus";
+import Our_Expertise from "./pages/Our_Expertise";
 import Contact from "./pages/Contact";
 import Collaborate from "./pages/Collaborate";
 import FieldCraft from "./pages/FieldCraft";
@@ -24,7 +24,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About_Us" element={<About_Us />} />
-            <Route path="/Areas_Of_Focus" element={<Areas_Of_Focus />} />
+            <Route path="/Our_Expertise" element={<Our_Expertise />} />
             <Route path="/Collaborate" element={<Collaborate />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/FieldCraft" element={<FieldCraft />} />

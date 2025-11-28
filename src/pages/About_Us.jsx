@@ -1,74 +1,68 @@
 import React from "react";
+import { motion } from "framer-motion"; // <-- required for animated underline
 
 import ApproachCards from "../components/ApproachCards";
-import StackedCarousel from "../components/StackedCarousel";
+import StackedScrollCards from "../components/StackedScrollCards";
+import OEsslin from "../components/OEsslin";
+
 
 export default function About_Us() {
   return (
     <div className="w-full bg-white text-black overflow-x-hidden">
 
       {/* HERO SECTION — OUR STORY */}
-      <div className="relative max-w-7xl mx-auto px-4 flex flex-col gap-4 
-                      py-8 sm:py-10 md:py-16 lg:py-4">
+      <div className="relative max-w-6xl lg:max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28 space-y-10">
 
         {/* Small Title */}
-        <p className="text-lg sm:text-xl md:text-2xl font-medium tracking-widest uppercase text-left">
-          OUR STORY
+        <p className="text-lg sm:text-xl md:text-2xl mb-4 text-black font-medium tracking-widest uppercase">
+        The <OEsslin /> Perspective
         </p>
 
-        {/* Main Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold">
-          The oEsslin Perspective
-        </h1>
+        {/* Main Heading */}
+        <h1
+  className="
+    font-semibold 
+    text-4xl sm:text-4xl md:text-5xl lg:text-7xl
+    text-left max-w-6xl leading-tight 
+  "
+>
+  Unlocking{" "}
+  <span className="relative inline-block">
+    transformative
 
-        {/* Paragraph */}
-        <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl text-left">
-          oEssLin is a systems consultancy that helps organizations solve complex challenges.
+    {/* Animated Underline */}
+    <motion.span
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      transition={{ duration: 1.8, ease: [0.22, 0.61, 0.36, 1] }}
+      className="absolute left-0 h-[4px] bg-[#98C1FF]"
+      style={{
+        bottom: "-0.05em"
+      }}
+    />
+  </span>{" "}
+  <br />
+  potential to create enduring impact.
+</h1>
+
+
+        {/* Supporting Paragraph */}
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed text-black max-w-3xl">
+        <OEsslin /> is a systems consultancy that helps organizations solve complex challenges.
           From operational inefficiency to sustainable growth, we design and implement strategies
           that strengthen performance, reduce waste, and align business outcomes with social and
           environmental realities.
         </p>
       </div>
 
-      {/* Stacked Carousel */}
-      <div className="-mt-8 sm:-mt-2 md:-mt-20 lg:-mt-52
-                      mb-16 sm:mb-6 md:mb-24 lg:mb-12">
-        <StackedCarousel />
-      </div>
-
-      {/* WHY WE EXIST + HOW WE WORK */}
-      <div className="relative max-w-7xl mx-auto px-4 flex flex-col gap-10 
-                      py-10 sm:py-10 md:py-14 lg:py-10">
-
-        {/* WHY WE EXIST */}
-        <div className="flex flex-col gap-4">
-          <p className="text-base sm:text-lg md:text-xl uppercase tracking-widest text-left border-b border-black pb-1">
-            Why we exist
-          </p>
-
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-8xl text-left">
-          The world’s biggest challenges don’t sit neatly in sectors. they live in the spaces between them. oEsslin exists to bridge those gaps. We saw how governments, businesses, and communities often work in isolation — duplicating efforts, wasting resources, and missing opportunities for shared value. Our mission is simple: to make systems work together. When they do, profits grow, risks shrink, and communities thrive.
-          </p>
-        </div>
-
-        {/* HOW WE WORK */}
-        <div className="flex flex-col gap-4">
-          <p className="text-base sm:text-lg md:text-xl uppercase tracking-widest text-left border-b border-black pb-1">
-            How we work
-          </p>
-
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-8xl text-left">
-          We take a systems-oriented approach to problem-solving — combining business analytics, design thinking, and field intelligence to see the whole picture. We diagnose inefficiencies, map leverage points, and design practical solutions that last. 
-          </p>
-        </div>
-
-      </div>
+      {/* Scroll Experience */}
+      <StackedScrollCards />
 
       {/* Approach Section */}
       <div className="mt-6 sm:mt-2 md:mt-8 lg:mt-2">
         <ApproachCards />
       </div>
-
     </div>
   );
 }
+
