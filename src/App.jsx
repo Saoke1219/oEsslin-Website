@@ -1,5 +1,6 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -28,7 +29,8 @@ export default function App() {
             <Route path="/FieldCraft" element={<FieldCraft />} />
             <Route path="/SifloopHub" element={<SifloopHub />} />
 
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+
           </Routes>
         </div>
 
