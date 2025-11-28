@@ -14,7 +14,7 @@ import ScrollUp from "./components/ScrollUp";
 
 export default function App() {
   return (
-    <Router basename="/">
+    <Router basename="/oEsslin-Website">
       <div className="relative flex flex-col min-h-screen">
         <Navbar />
 
